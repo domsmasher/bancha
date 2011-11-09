@@ -1,0 +1,123 @@
+
+
+
+<!DOCTYPE html>
+
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width" />
+	
+	
+    <title>Architecture &mdash; Bancha 0.9.5 documentation</title>
+  
+	<!-- Included CSS Files -->
+	<link rel="stylesheet" href="../_static/stylesheets/foundation.css" type="text/css" />
+	<link rel="stylesheet" href="../_static/stylesheets/app.css" type="text/css" />
+	<link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" href="../_static/stylesheets/ie.css" type="text/css" />
+	<![endif]-->
+
+	
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+
+	<!-- container -->
+	<div class="container">
+		
+		<div class="row">
+			<div class="six columns header">
+				<a href="http://getbancha.com/"><img src="../_static/asset/logo.png" alt="Bancha"></a>
+			</div>
+			<div class="six columns header-right">
+				<p>v0.9.5 - Official User Guide</p>
+			</div>
+		</div>
+
+		<hr />
+
+		<div class="row">
+			<div class="twelve columns">
+				<ul class="breadcrumbs">
+
+					You are here:
+					<!--<li class="home"><a href="../index.html">Home</a>&nbsp;&nbsp;</li>-->
+					<li class="bread"><a href="index.html" accesskey="U">Introduction</a>&nbsp;&nbsp; </li>
+
+					<li><strong>Architecture</strong></li>
+				</ul>
+			</div>
+		</div>
+
+		<hr />
+		
+		<div class="row">
+			
+
+			<div class="three columns">
+				<ul>
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">Basic info</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install/index.html">Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../firststeps/index.html">First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content-types/index.html">Content types</a></li>
+</ul>
+
+			</div>
+
+			<div class="nine columns">
+				<div class="section" id="architecture">
+<h1>Architecture<a class="headerlink" href="#architecture" title="Permalink to this headline">¶</a></h1>
+<p>Bancha uses the Model-View-Controller approach, which allows great separation between logic and presentation.</p>
+<p>We extended the base CodeIgniter structure into a new, better one.</p>
+<img alt="../_images/mvc-scheme.png" src="../_images/mvc-scheme.png" />
+<p>First of all, there&#8217;s a routing system that calls a front-controller. This, loads a specific dispatcher depending on the request, and starts the loaded dispatcher.</p>
+<p>Tipically, many models such as the <strong>records</strong> and the <strong>pages</strong> are already loaded into the base system so they don&#8217;t need to be loaded before use.</p>
+<p>The dispatcher, using models and libraries prepares all the data that the view will need, and finally loads the view.</p>
+<p>The view checks the current theme and using it loads the theme layout.
+Next, the theme layout renders the page base layout (head, wrapper, etc...) and the chosen view template.
+The view template, finally compiles the view using the <strong>content render</strong> (described in the next chapters).</p>
+</div>
+
+			</div>
+
+		</div>
+
+		<hr />
+
+		<div class="row">
+			
+			<div class="twelve columns">
+			Bancha - Copyright 2011(C) Squallstar Studio - <a href="http://www.squallstar.it">www.squallstar.it</a>
+			</div>
+
+			<div class="six columns">
+
+			</div>
+
+		</div>
+		
+	</div>
+	<!-- container -->
+	
+	
+
+
+	<!-- Included JS Files -->
+	<script src="../_static/javascripts/foundation.js"></script>
+	<script src="../_static/javascripts/app.js"></script>
+	
+</body>
+</html>

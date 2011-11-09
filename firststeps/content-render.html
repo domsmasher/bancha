@@ -1,0 +1,143 @@
+
+
+
+<!DOCTYPE html>
+
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width" />
+	
+	
+    <title>The content render &mdash; Bancha 0.9.5 documentation</title>
+  
+	<!-- Included CSS Files -->
+	<link rel="stylesheet" href="../_static/stylesheets/foundation.css" type="text/css" />
+	<link rel="stylesheet" href="../_static/stylesheets/app.css" type="text/css" />
+	<link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" href="../_static/stylesheets/ie.css" type="text/css" />
+	<![endif]-->
+
+	
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+
+	<!-- container -->
+	<div class="container">
+		
+		<div class="row">
+			<div class="six columns header">
+				<a href="http://getbancha.com/"><img src="../_static/asset/logo.png" alt="Bancha"></a>
+			</div>
+			<div class="six columns header-right">
+				<p>v0.9.5 - Official User Guide</p>
+			</div>
+		</div>
+
+		<hr />
+
+		<div class="row">
+			<div class="twelve columns">
+				<ul class="breadcrumbs">
+
+					You are here:
+					<!--<li class="home"><a href="../index.html">Home</a>&nbsp;&nbsp;</li>-->
+					<li class="bread"><a href="index.html" accesskey="U">First steps</a>&nbsp;&nbsp; </li>
+
+					<li><strong>The content render</strong></li>
+				</ul>
+			</div>
+		</div>
+
+		<hr />
+		
+		<div class="row">
+			
+
+			<div class="three columns">
+				<ul>
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">Basic info</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install/index.html">Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content-types/index.html">Content types</a></li>
+</ul>
+
+			</div>
+
+			<div class="nine columns">
+				<div class="section" id="the-content-render">
+<h1>The content render<a class="headerlink" href="#the-content-render" title="Permalink to this headline">¶</a></h1>
+<p>On the previous chapter, you learned how to set up a page to list Blog posts.
+The <strong>content render</strong> is the element responsable of the rendering of the body of the pages/records.</p>
+<p>It fires different actions based on the behaviour that each page choose.</p>
+<ul class="simple">
+<li>Single text</li>
+<li>Content list</li>
+<li>External link</li>
+<li>Custom action</li>
+</ul>
+<p>The <strong>content render</strong> is tipically placed in the container element of a website, and is defined inside every theme: this means that each teme can completely customize how the <strong>content render</strong> takes care of any action!</p>
+<div class="section" id="single-text">
+<h2>Single text<a class="headerlink" href="#single-text" title="Permalink to this headline">¶</a></h2>
+<p>When a page choose the action <strong>Single text</strong>, the <strong>Content render</strong> just displays the text you typed into the field named <strong>content</strong>.</p>
+</div>
+<div class="section" id="content-list">
+<h2>Content list<a class="headerlink" href="#content-list" title="Permalink to this headline">¶</a></h2>
+<p>If a page is set to the <strong>Content list</strong> action, first of all the <strong>Dispatcher</strong> extracts the record list, and links it to the <strong>page</strong>.
+Then, when the <strong>content render</strong> is called it will load the <strong>custom template</strong> of the content type passing the record list as parameter.</p>
+<p>In our example, these are the operations performed under the hood:</p>
+<ol class="arabic simple">
+<li>The router tells the dispatcher to extract the <strong>my-first-page</strong> page.</li>
+<li>The dispatcher see that the page action is <strong>Content list</strong>, so extracts the <strong>posts of the blog</strong>.</li>
+<li>The dispatcher links the posts to the page, and launch the <strong>view</strong> rendering process.</li>
+<li>While in the view, the <strong>content render</strong> see that there is a record list, so it checks the type of the records (in our example: Blog).</li>
+<li>The content render loads the template view of that content type, using the current theme: <strong>themes/default/views/type_templates/Blog/list.php</strong>.</li>
+<li>Finally, the view will be rendered and passed back as output.</li>
+</ol>
+<p>When you click on a record (a post), the differences are that only the chosen record will be extracted, and the rendered view will be <strong>Blog/detail.php</strong> instead of <strong>Blog/list.php</strong>.</p>
+</div>
+</div>
+
+			</div>
+
+		</div>
+
+		<hr />
+
+		<div class="row">
+			
+			<div class="twelve columns">
+			Bancha - Copyright 2011(C) Squallstar Studio - <a href="http://www.squallstar.it">www.squallstar.it</a>
+			</div>
+
+			<div class="six columns">
+
+			</div>
+
+		</div>
+		
+	</div>
+	<!-- container -->
+	
+	
+
+
+	<!-- Included JS Files -->
+	<script src="../_static/javascripts/foundation.js"></script>
+	<script src="../_static/javascripts/app.js"></script>
+	
+</body>
+</html>

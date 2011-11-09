@@ -1,0 +1,137 @@
+
+
+
+<!DOCTYPE html>
+
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width" />
+	
+	
+    <title>How to install &mdash; Bancha 0.9.5 documentation</title>
+  
+	<!-- Included CSS Files -->
+	<link rel="stylesheet" href="../_static/stylesheets/foundation.css" type="text/css" />
+	<link rel="stylesheet" href="../_static/stylesheets/app.css" type="text/css" />
+	<link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" href="../_static/stylesheets/ie.css" type="text/css" />
+	<![endif]-->
+
+	
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+
+	<!-- container -->
+	<div class="container">
+		
+		<div class="row">
+			<div class="six columns header">
+				<a href="http://getbancha.com/"><img src="../_static/asset/logo.png" alt="Bancha"></a>
+			</div>
+			<div class="six columns header-right">
+				<p>v0.9.5 - Official User Guide</p>
+			</div>
+		</div>
+
+		<hr />
+
+		<div class="row">
+			<div class="twelve columns">
+				<ul class="breadcrumbs">
+
+					You are here:
+					<!--<li class="home"><a href="../index.html">Home</a>&nbsp;&nbsp;</li>-->
+					<li class="bread"><a href="index.html" accesskey="U">Install</a>&nbsp;&nbsp; </li>
+
+					<li><strong>How to install</strong></li>
+				</ul>
+			</div>
+		</div>
+
+		<hr />
+		
+		<div class="row">
+			
+
+			<div class="three columns">
+				<ul>
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">Basic info</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../firststeps/index.html">First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content-types/index.html">Content types</a></li>
+</ul>
+
+			</div>
+
+			<div class="nine columns">
+				<div class="section" id="how-to-install">
+<h1>How to install<a class="headerlink" href="#how-to-install" title="Permalink to this headline">¶</a></h1>
+<p>Download Bancha from the official GitHub repository <a class="reference external" href="https://github.com/squallstar/bancha">https://github.com/squallstar/bancha</a> and unzip it into the root of your virtualhost.
+Normally the index.php file will be at your root.</p>
+<p>The base structure is composed as follows:</p>
+<div class="highlight-ci"><div class="highlight"><pre><span class="o">.</span><span class="nx">htaccess</span>
+<span class="nx">application</span><span class="o">/</span>
+<span class="nx">attach</span><span class="o">/</span>
+<span class="nx">core</span><span class="o">/</span>
+<span class="nx">themes</span><span class="o">/</span>
+<span class="nx">index</span><span class="o">.</span><span class="nx">php</span>
+</pre></div>
+</div>
+<p>For the best security, both the <strong>core</strong> and the <strong>application</strong> folders should be placed above web root so that they are not directly accessible via a browser. By default, .htaccess files are included in each folder to help prevent direct access.
+If you move, the above two folders, be sure to update their paths on the <strong>index.php</strong> file (<strong>$user_path</strong> and <strong>$core_folder</strong> variables)</p>
+<ol class="arabic simple">
+<li>Open the <strong>application/config/config.php</strong> file and set your base URL. Please change also the encryption key to a random one.</li>
+<li>Sets the database connection parameters here: <strong>application/config/database.php</strong></li>
+<li>Go through your browser to this URL: <a class="reference external" href="http://example.org/admin/install">http://example.org/admin/install</a>. If you see an error, check the previous steps!</li>
+<li>Choose your install type between &#8220;Default&#8221; and &#8220;Blog&#8221;. The Blog one, will create and configures the &#8220;Blog&#8221; and &#8220;Comments&#8221; content types for you.</li>
+</ol>
+<ol class="arabic simple" start="6">
+<li>You&#8217;re done! The install script will create a content type named &#8220;Menu&#8221; which is linked to the page tree of your website.</li>
+</ol>
+<p>When you&#8217;re ready, go to the next chapter: <a class="reference internal" href="../introduction/understanding.html"><em>Understanding Bancha</em></a> or read how to upgrade an existing installation: <a class="reference internal" href="upgrading.html"><em>Upgrading From a Previous Version</em></a></p>
+</div>
+
+			</div>
+
+		</div>
+
+		<hr />
+
+		<div class="row">
+			
+			<div class="twelve columns">
+			Bancha - Copyright 2011(C) Squallstar Studio - <a href="http://www.squallstar.it">www.squallstar.it</a>
+			</div>
+
+			<div class="six columns">
+
+			</div>
+
+		</div>
+		
+	</div>
+	<!-- container -->
+	
+	
+
+
+	<!-- Included JS Files -->
+	<script src="../_static/javascripts/foundation.js"></script>
+	<script src="../_static/javascripts/app.js"></script>
+	
+</body>
+</html>

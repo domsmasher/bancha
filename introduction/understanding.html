@@ -1,0 +1,151 @@
+
+
+
+<!DOCTYPE html>
+
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width" />
+	
+	
+    <title>Understanding Bancha &mdash; Bancha 0.9.5 documentation</title>
+  
+	<!-- Included CSS Files -->
+	<link rel="stylesheet" href="../_static/stylesheets/foundation.css" type="text/css" />
+	<link rel="stylesheet" href="../_static/stylesheets/app.css" type="text/css" />
+	<link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" href="../_static/stylesheets/ie.css" type="text/css" />
+	<![endif]-->
+
+	
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+
+	<!-- container -->
+	<div class="container">
+		
+		<div class="row">
+			<div class="six columns header">
+				<a href="http://getbancha.com/"><img src="../_static/asset/logo.png" alt="Bancha"></a>
+			</div>
+			<div class="six columns header-right">
+				<p>v0.9.5 - Official User Guide</p>
+			</div>
+		</div>
+
+		<hr />
+
+		<div class="row">
+			<div class="twelve columns">
+				<ul class="breadcrumbs">
+
+					You are here:
+					<!--<li class="home"><a href="../index.html">Home</a>&nbsp;&nbsp;</li>-->
+					<li class="bread"><a href="index.html" accesskey="U">Introduction</a>&nbsp;&nbsp; </li>
+
+					<li><strong>Understanding Bancha</strong></li>
+				</ul>
+			</div>
+		</div>
+
+		<hr />
+		
+		<div class="row">
+			
+
+			<div class="three columns">
+				<ul>
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">Basic info</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install/index.html">Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../firststeps/index.html">First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content-types/index.html">Content types</a></li>
+</ul>
+
+			</div>
+
+			<div class="nine columns">
+				<div class="section" id="understanding-bancha">
+<h1>Understanding Bancha<a class="headerlink" href="#understanding-bancha" title="Permalink to this headline">¶</a></h1>
+<p>It&#8217;s very important to understand how Bancha works, before using it.</p>
+<p>Bancha has been built to manage any type of content. This means that teoretically you can manage an infinite number of <strong>things</strong>.</p>
+<p>Any different kind on thing, in Bancha becomes a <strong>Content type</strong>.</p>
+<ul class="simple">
+<li>The news list of a website, will be a content type named <strong>News</strong>.</li>
+<li>The posts of a blog, will be a content type named <strong>Posts</strong> and the linked comments will be another content type named <strong>Comments</strong>.</li>
+<li>If you want to build an e-commerce, you may need to create also a <strong>Products</strong> content type.</li>
+</ul>
+<p>Feel free to create tens of different content types.</p>
+<div class="section" id="bancha-s-pillars">
+<h2>Bancha&#8217;s pillars<a class="headerlink" href="#bancha-s-pillars" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="content-types">
+<h3>Content types<a class="headerlink" href="#content-types" title="Permalink to this headline">¶</a></h3>
+<p>How can a content types be differents between each others?
+Every content types have a unique <strong>scheme</strong> that describes it.</p>
+<p>The <strong>News</strong> content type will have a scheme, the <strong>Comments</strong> content type will have a different scheme and so on.</p>
+<p>Basically, a <strong>Scheme</strong> consists in a single <strong>XML</strong> file that describes all the fields that the <strong>Records</strong> of that content type needs to implement.
+You will learn how to create and manage the content types and their schemes in the next chapters of the documentation.</p>
+<div class="section" id="hierarchically-structure">
+<h4>Hierarchically structure<a class="headerlink" href="#hierarchically-structure" title="Permalink to this headline">¶</a></h4>
+<p>A content type could be of type <strong>Pages</strong>: it means that its records can be organized hierarchically. Each record can have a unique parent and infinite childs, so it&#8217;s perfect for &#8220;tree shaped&#8221; contents.</p>
+</div>
+<div class="section" id="non-hierarchically-structure">
+<h4>Non-hierarchically structure<a class="headerlink" href="#non-hierarchically-structure" title="Permalink to this headline">¶</a></h4>
+<p>These content types cannot be organized hierarchically. It&#8217;s perfect when you have to define linear contents such as <strong>news</strong>, <strong>products</strong> or the <strong>posts</strong> of a blog.</p>
+</div>
+</div>
+<div class="section" id="mvc-architecture">
+<h3>MVC Architecture<a class="headerlink" href="#mvc-architecture" title="Permalink to this headline">¶</a></h3>
+<p>Bancha it&#8217;s all written using the MVC paradigm.
+Before starting with the tutorial, take a look at the <a class="reference internal" href="architecture.html"><em>Architecture</em></a>.</p>
+</div>
+<div class="section" id="introduction-tutorial">
+<h3>Introduction tutorial<a class="headerlink" href="#introduction-tutorial" title="Permalink to this headline">¶</a></h3>
+<p>To make your first steps with Bancha, follow the introduction tutorial: <a class="reference internal" href="../firststeps/getting-started.html"><em>Getting started</em></a></p>
+</div>
+</div>
+</div>
+
+			</div>
+
+		</div>
+
+		<hr />
+
+		<div class="row">
+			
+			<div class="twelve columns">
+			Bancha - Copyright 2011(C) Squallstar Studio - <a href="http://www.squallstar.it">www.squallstar.it</a>
+			</div>
+
+			<div class="six columns">
+
+			</div>
+
+		</div>
+		
+	</div>
+	<!-- container -->
+	
+	
+
+
+	<!-- Included JS Files -->
+	<script src="../_static/javascripts/foundation.js"></script>
+	<script src="../_static/javascripts/app.js"></script>
+	
+</body>
+</html>

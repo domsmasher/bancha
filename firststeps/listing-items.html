@@ -1,0 +1,140 @@
+
+
+
+<!DOCTYPE html>
+
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width" />
+	
+	
+    <title>Listing items &mdash; Bancha 0.9.5 documentation</title>
+  
+	<!-- Included CSS Files -->
+	<link rel="stylesheet" href="../_static/stylesheets/foundation.css" type="text/css" />
+	<link rel="stylesheet" href="../_static/stylesheets/app.css" type="text/css" />
+	<link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" href="../_static/stylesheets/ie.css" type="text/css" />
+	<![endif]-->
+
+	
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+
+	<!-- container -->
+	<div class="container">
+		
+		<div class="row">
+			<div class="six columns header">
+				<a href="http://getbancha.com/"><img src="../_static/asset/logo.png" alt="Bancha"></a>
+			</div>
+			<div class="six columns header-right">
+				<p>v0.9.5 - Official User Guide</p>
+			</div>
+		</div>
+
+		<hr />
+
+		<div class="row">
+			<div class="twelve columns">
+				<ul class="breadcrumbs">
+
+					You are here:
+					<!--<li class="home"><a href="../index.html">Home</a>&nbsp;&nbsp;</li>-->
+					<li class="bread"><a href="index.html" accesskey="U">First steps</a>&nbsp;&nbsp; </li>
+
+					<li><strong>Listing items</strong></li>
+				</ul>
+			</div>
+		</div>
+
+		<hr />
+		
+		<div class="row">
+			
+
+			<div class="three columns">
+				<ul>
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">Basic info</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install/index.html">Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content-types/index.html">Content types</a></li>
+</ul>
+
+			</div>
+
+			<div class="nine columns">
+				<div class="section" id="listing-items">
+<h1>Listing items<a class="headerlink" href="#listing-items" title="Permalink to this headline">¶</a></h1>
+<p>Every page in Bancha, can be set to fire different actions. From a single static text to a dynamic list of records.</p>
+<p>Come back to the <strong>Menu</strong> content types, and edit (or create) a page.
+On the top sidebar, you will see the <strong>&#8220;Actions&#8221;</strong> section.</p>
+<p>Here, you can define the behaviour of the page between these choices:</p>
+<ul class="simple">
+<li>Single text</li>
+<li>Content list</li>
+<li>External link</li>
+<li>Custom action</li>
+</ul>
+<p>Let&#8217;s focus for a moment on the <strong>&#8220;Content list&#8221;</strong>.
+When you choose this option, many other fields appears.
+The first new field is <strong>Content type</strong>: here, you have to select the source content type of your list.
+In our tutorial, this will likely be <strong>Blog</strong> because we want to list the blog posts.</p>
+<p>Choose it, and save our page... hooray! It&#8217;s time for fun! Switch to the front-end (the <strong>Back to site</strong> link on the bottom left of Bancha) and visit the page you just created.</p>
+<p>You should see the list of the records of type <strong>Blog</strong>! Clicking on an item will send you to the detail of that record. As you can see, the URL will be the same plus the blog post URI:</p>
+<div class="highlight-ci"><div class="highlight"><pre><span class="c1">//Page url:</span>
+<span class="nx">http</span><span class="o">://</span><span class="nx">example</span><span class="o">.</span><span class="nx">org</span><span class="o">/</span><span class="nx">my</span><span class="o">-</span><span class="nx">first</span><span class="o">-</span><span class="nx">page</span>
+
+<span class="c1">//Blog post detail:</span>
+<span class="nx">http</span><span class="o">://</span><span class="nx">example</span><span class="o">.</span><span class="nx">org</span><span class="o">/</span><span class="nx">my</span><span class="o">-</span><span class="nx">first</span><span class="o">-</span><span class="nx">page</span><span class="o">/</span><span class="nx">title</span><span class="o">-</span><span class="nx">of</span><span class="o">-</span><span class="nx">my</span><span class="o">-</span><span class="nx">post</span>
+</pre></div>
+</div>
+<p>When the last segment of a URL isn&#8217;t a page, the Bancha <strong>Dispatcher</strong> will find a page using the previous segment and checks whether that page is listing contents of the same type of the last segment. Pretty complicated to understand, but don&#8217;t worry &#8216;cos you don&#8217;t have to learn this right now!</p>
+<p>On the next chapters you will learn how to completely customize the layout of that lists/details pages, and which field need to be shown.</p>
+<p>Now it&#8217;s time to discover how the <strong>Content render</strong> works: <a class="reference internal" href="content-render.html"><em>The content render</em></a></p>
+</div>
+
+			</div>
+
+		</div>
+
+		<hr />
+
+		<div class="row">
+			
+			<div class="twelve columns">
+			Bancha - Copyright 2011(C) Squallstar Studio - <a href="http://www.squallstar.it">www.squallstar.it</a>
+			</div>
+
+			<div class="six columns">
+
+			</div>
+
+		</div>
+		
+	</div>
+	<!-- container -->
+	
+	
+
+
+	<!-- Included JS Files -->
+	<script src="../_static/javascripts/foundation.js"></script>
+	<script src="../_static/javascripts/app.js"></script>
+	
+</body>
+</html>
